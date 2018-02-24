@@ -8,6 +8,10 @@ int main(int argc, char *argv[])
 
     {
         Person one;
+        Person two("Smythecraft");
+        Person three("Dimwiddy", "Sam") ;
+
+        //one.Show();
     }
     
     return a.exec();
