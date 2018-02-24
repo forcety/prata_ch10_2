@@ -1,5 +1,7 @@
 #include "person.h"
-#include "iostream"
+#include <iostream>
+#include <cstring>
+
 
 Person::Person()
 {
@@ -13,5 +15,15 @@ Person::Person(const std::string & ln, const char * fn)
     std::cout << "Main constructor called "
               << "with arguments " << ln << " and " << fn << "\n";
     lname = ln;
-    fname[0] = fn[0];
+    strcpy(fname, fn) ;
+}
+
+void Person::Show() const
+{
+    std::cout << fname << " " << lname << "\n";
+}
+
+void Person::FormalShow() const
+{
+    std::cout << lname << ", " << fname << "\n";
 }
